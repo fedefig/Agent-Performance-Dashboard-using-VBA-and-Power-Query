@@ -1,5 +1,9 @@
 # Agent-Performance-Dashboard-using-VBA-and-Power-Query
-This consolidated dataset contains monthly operational performance metrics across multiple European teams (Manchester, Liverpool, Dusseldorf, Frankfurt) of a company selling High Tech products for European Car producers
+This consolidated dataset contains monthly operational performance metrics across multiple European teams (Manchester, Liverpool, Dusseldorf, Frankfurt) of a company selling High Tech products for European Car producers.
+
+CSVs are processed in batch using VBA code, and the newly formatted CSVs are then loaded to Power Query to create a dashboard with valuable insights
+
+Reason for formatting CSVs before using them in PQ:
 
 The data is contained in a set of CSVs, one for each type of activity for each office, showing the performance of all the agents for different type of activities (Inbound Calls, Outbound Calls, Contracts and Quotes), but these CSVs contain many issues:
 
