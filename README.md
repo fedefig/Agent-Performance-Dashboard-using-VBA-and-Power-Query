@@ -26,7 +26,7 @@ Power Query expects headers at row 1.
 Impact: You must manually promote headers and remove top rows for every file. If one CSV has 3 metadata rows and another has 4, the automatic combine breaks.
 
 🔤 3. Country naming inconsistencies
-You already know this pain well: “Romania” vs “Rumania”, “A Coruña” vs “La Coruña”, “Côte d’Ivoire” vs “Ivory Coast”.
+
 When combining multiple CSVs:
 •	PQ treats each spelling as a different column
 •	Charts show duplicated categories
@@ -35,7 +35,8 @@ When combining multiple CSVs:
 Impact: final dataset becomes fragmented and unusable for visuals.
 
 📏 4. Wide-format tables are fragile
-Your CSVs are extremely wide (hundreds of columns). Power Query handles wide tables poorly because:
+
+CSVs are extremely wide (hundreds of columns). Power Query handles wide tables poorly because:
 •	Column detection becomes slow
 •	Automatic type detection misfires
 •	Refresh times explode
@@ -73,6 +74,7 @@ Some CSVs may be:
 •	UTF 16
 •	With or without BOM
 Power Query interprets encoding differently per file.
+
 Impact: Country names with accents break, causing duplicate categories.
 
 📁 8. Folder combine step becomes unstable
@@ -98,7 +100,7 @@ Power Query can also:
 
 Impact: The combined dataset is incomplete.
 
-⭐ The real underlying issue
+⭐ The real underlying issue:
 CSVs are not standardized, and Power Query is extremely sensitive to structural differences.
 
 🎯 Solution: To make multiple CSVs usable in Power Query, we need to normalize them before loading.
