@@ -124,3 +124,6 @@ with:
 •	no encoding issues
 
 Once every CSV is normalized, Power Query can combine them flawlessly
+
+⭐ Dashboard creation
+This consolidated dataset contains monthly operational performance metrics across multiple European teams (Manchester, Liverpool, Dusseldorf, Frankfurt). Each row includes Team, Month, Year, UID, Count, Quarter, Semester, Language, and an activity type: “CONTRACTS”, “INB (Inbound)”, “OUT (Outbound)”, or “QUOTES”. The data shows strong seasonal patterns, with Q4 consistently outperforming other quarters, and clear regional differences in activity volume. Agent level variation enables detailed productivity analysis, while language segmentation supports cross‑region benchmarking. 
