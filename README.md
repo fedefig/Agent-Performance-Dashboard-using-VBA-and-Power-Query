@@ -11,6 +11,7 @@ Typical problems:
 •	Slightly different header names (e.g., “United States” vs “USA”)
 •	Extra blank columns created by the export process
 •	Hidden delimiters or trailing separators
+
 Impact: Power Query’s Combine Files step fails or produces a table with many null values and misaligned columns.
 
 🧩 2. Header row problems
@@ -19,6 +20,7 @@ Your CSVs often have:
 •	User names starting at row 5
 •	Sometimes extra metadata rows above
 Power Query expects headers at row 1.
+
 Impact: You must manually promote headers and remove top rows for every file. If one CSV has 3 metadata rows and another has 4, the automatic combine breaks.
 
 🔤 3. Country naming inconsistencies
@@ -27,7 +29,8 @@ When combining multiple CSVs:
 •	PQ treats each spelling as a different column
 •	Charts show duplicated categories
 •	Merging tables becomes impossible without a mapping table
-Impact: Your final dataset becomes fragmented and unusable for visuals.
+
+Impact: final dataset becomes fragmented and unusable for visuals.
 
 📏 4. Wide-format tables are fragile
 Your CSVs are extremely wide (hundreds of columns). Power Query handles wide tables poorly because:
@@ -35,6 +38,7 @@ Your CSVs are extremely wide (hundreds of columns). Power Query handles wide tab
 •	Automatic type detection misfires
 •	Refresh times explode
 •	Any mismatch in column count breaks the combine step
+
 Impact: Charts refresh slowly or fail entirely.
 
 🔄 5. Unpivoting multiple CSVs is expensive in terms of performance
@@ -47,7 +51,8 @@ User | Country | Calls
 But:
 •	If one CSV has 180 country columns and another has 178, unpivoting produces different column sets.
 •	PQ tries to align them and creates thousands of null rows.
-Impact: Your final table becomes bloated and slow.
+
+Impact: final table becomes bloated and slow.
 
 🧹 6. Dirty data inside the CSVs
 Common issues:
@@ -56,6 +61,7 @@ Common issues:
 •	Mixed numeric/text types
 •	Extra spaces around names
 •	Non UTF8 characters (accents, apostrophes)
+
 Impact: Charts fail to aggregate correctly (e.g., “Fede” ≠ “FEDE”).
 
 🗂️ 7. File encoding differences
@@ -71,20 +77,23 @@ Impact: Country names with accents break, causing duplicate categories.
 When using Get Data → Folder:
 •	PQ samples only one file to define the schema
 •	If other files differ even slightly, the combine step breaks
-Impact: You get “Column not found” errors or missing data.
+
+Impact: We get “Column not found” errors or missing data.
 
 📊 9. Charts depend on stable categories
 If country names or user names vary across CSVs:
 •	Power BI or Excel charts show fragmented bars
 •	Slicers stop working
 •	Trend lines break
-Impact: Your visuals become misleading or unusable.
+
+Impact: Visuals become misleading or unusable.
 
 🧨 10. Large CSVs cause truncation or partial loads as Excel sometimes loads only the first ~100 rows of a huge CSV.
 Power Query can also:
 •	Fail to read the full file
 •	Misinterpret delimiters
 •	Drop rows silently
+
 Impact: The combined dataset is incomplete.
 
 ⭐ The real underlying issue
