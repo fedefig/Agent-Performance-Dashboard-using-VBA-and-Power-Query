@@ -5,6 +5,7 @@ The data is contained in a set of CSVs, one for each type of activity for each o
 
 1. Structural inconsistencies between CSVs
 Power Query can only combine files automatically when they share the exact same schema.
+
 Typical problems:
 •	Different column counts (e.g., one file has 180 countries, another 175)
 •	Columns in different order
@@ -15,7 +16,8 @@ Typical problems:
 Impact: Power Query’s Combine Files step fails or produces a table with many null values and misaligned columns.
 
 🧩 2. Header row problems
-Your CSVs often have:
+
+CSVs often have:
 •	A header row at row 4 (countries)
 •	User names starting at row 5
 •	Sometimes extra metadata rows above
