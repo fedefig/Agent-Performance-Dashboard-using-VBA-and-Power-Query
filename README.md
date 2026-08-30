@@ -115,4 +115,5 @@ with:
 •	no wide tables
 •	no header problems
 •	no encoding issues
+
 Once every CSV is normalized, Power Query can combine them flawlessly
