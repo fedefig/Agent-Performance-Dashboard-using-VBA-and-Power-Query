@@ -4,7 +4,7 @@ This consolidated dataset contains monthly operational performance metrics acros
 CSVs are processed in batch using VBA code, and the newly formatted CSVs are then loaded to Power Query to create a dashboard with valuable insights
 
 📁 Dataset and Dashboard Download
-The full Excel dataset and the Query dashboard with VBA coding are available here: 
+The full Excel dataset and the Query dashboard with VBA coding are available here: [Download Dataset](https://www.kaggle.com/datasets/fedefigueiras/agent-performance-across-offices)
 
 Reason for formatting CSVs before using them in PQ:
 
